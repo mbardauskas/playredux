@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "newLine": "CRLF",
+    "noEmitOnError": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "listFiles": true,
+    "jsx": 2
+  },
+  "files": [
+    "./typings/tsd.d.ts",
+    "./src/scripts/bootstrap.ts"
+  ]
+}
