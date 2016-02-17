@@ -10,9 +10,5 @@
     "emitDecoratorMetadata": true,
     "listFiles": true,
     "jsx": 2
-  },
-  "files": [
-    "./typings/tsd.d.ts",
-    "./src/scripts/bootstrap.ts"
-  ]
+  }
 }

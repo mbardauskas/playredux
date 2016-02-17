@@ -9,12 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.7"
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   },
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-template": "^3.1.0",
     "gulp-typescript": "^2.11.0",
-    "typescript": "^1.7.5"
+    "gulp-util": "^3.0.7",
+    "typescript": "^1.7.5",
+    "webpack": "^1.12.13"
   }
 }

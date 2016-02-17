@@ -1,5 +1,4 @@
-import React = require('react');
-declare var mountNode: any;
+import * as React from 'react';
 
 interface HelloWorldProps {
     name: string;
@@ -11,4 +10,4 @@ var HelloMessage = React.createClass<HelloWorldProps, any>({
     }
 });
 
-React.render(<HelloMessage name="John" />, mountNode);
+export = HelloMessage;
