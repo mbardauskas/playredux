@@ -61,8 +61,8 @@ var tsProject = tsc.createProject('./tsconfig.json', tsConfig);
 gulp.task('tsc', function() {
     var tsResult = gulp.src([
         './typings/tsd.d.ts',
-        SOURCE_DIR + '/scripts/*.tsx',
-        SOURCE_DIR + '/scripts/*.ts'
+        SOURCE_DIR + '/scripts/**/*.tsx',
+        SOURCE_DIR + '/scripts/**/*.ts'
     ])
         .pipe(tsc(tsProject));
 

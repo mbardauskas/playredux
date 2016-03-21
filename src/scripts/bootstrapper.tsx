@@ -1,23 +1,15 @@
 import * as React from "react";
-import * as ReactDOM  from "react-dom";
+import { render } from 'react-dom'
 import { createStore } from 'redux'
-import HelloWorld = require('./dom');
+import { Provider } from 'react-redux'
+import Application from './application'
+import configureStore from './store/configureStore'
 
-let reducer = (state = 0, action) => {
-    switch (action.type) {
-        case 'INCREMENT':
-            return state + 1;
-        case 'DECREMENT':
-            return state - 1;
-        default:
-            return state
-    }
-};
+const store = configureStore({});
 
-let store = createStore(reducer);
-
-store.subscribe(() => {
-    console.log(store.getState());
-});
-
-ReactDOM.render(<HelloWorld name={store.getState()} />, document.getElementById('root'));
+render(
+    <Provider store={store}>
+        <Application />
+    </Provider>,
+    document.getElementById('root')
+);
