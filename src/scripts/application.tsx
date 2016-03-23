@@ -1,12 +1,14 @@
 import * as React from "react";
 import * as ReactDOM  from "react-dom";
-import HelloWorld = require('./dom');
+import { AddMoneyEntry } from "./containers/AddMoneyEntry"
 
 interface AppProps {
 }
 
 export default React.createClass<AppProps, any>({
     render: function() {
-        return <div className="stinks"><HelloWorld name="world" /></div>;
+        return <div className="app">
+            <AddMoneyEntry />
+        </div>;
     }
 });
