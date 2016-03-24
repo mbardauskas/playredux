@@ -2,11 +2,12 @@ import * as React from 'react';
 import { connect } from 'react-redux'
 import { addMoneyEntry } from '../actions/index'
 
-interface AddTodoProps {
-    dispatch: any;
+function mapStateToProps(state: any) {
+    return state;
 }
 
-class AddMoneyEntryClass extends React.Component<any, any> {
+@connect(mapStateToProps)
+export class AddMoneyEntry extends React.Component<any, any> {
     public render() {
         let inputTitle;
         let inputAmount;
@@ -18,8 +19,7 @@ class AddMoneyEntryClass extends React.Component<any, any> {
                 if (!inputTitle.value.trim()) {
                     return
                 }
-                // @TODO: Where does this come from?
-                //this.props.dispatch(addMoneyEntry(inputTitle.value, inputAmount.value));
+                this.props.dispatch(addMoneyEntry(inputTitle.value, inputAmount.value));
                 inputTitle.value = '';
                 inputAmount.value = '';
                 }}>
@@ -41,5 +41,3 @@ class AddMoneyEntryClass extends React.Component<any, any> {
         )
     }
 }
-
-export let AddMoneyEntry = connect()(AddMoneyEntryClass);
