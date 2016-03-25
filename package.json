@@ -2,12 +2,8 @@
   "name": "testapp",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "MB",
+  "license": "MIT",
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
