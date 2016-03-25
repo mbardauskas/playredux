@@ -9,3 +9,7 @@ interface IReducerAction {
 }
 
 interface IMoneyEntryAction extends IMoneyEntry, IReducerAction {}
+
+interface AppState {
+    moneyEntries: IMoneyEntry[];
+}

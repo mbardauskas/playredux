@@ -1,12 +1,22 @@
 import { combineReducers } from 'redux'
 
-const initialState = {counter: 1};
+const initialState:AppState = {
+    moneyEntries: []
+};
 
-const reducer = (state = initialState, action) => {
+const reducer = (state:AppState = initialState, action) => {
     switch (action.type) {
-        case 'score':
+        case 'ADD_MONEY_ENTRY':
+            action = action as IMoneyEntryAction;
             return {
-                counter: state.counter + 1
+                moneyEntries: [
+                    ...state.moneyEntries,
+                    {
+                        id: action.id,
+                        title: action.title,
+                        amount: action.amount
+                    }
+                ]
             };
 
         default:
