@@ -1,6 +1,6 @@
 jest.autoMockOff();
 
-import * as TestUtils from 'react-addons-test-utils';
+import { shallow } from 'enzyme';
 import * as React from 'react';
 import { MoneyEntry } from '../MoneyEntry';
 
@@ -8,7 +8,7 @@ describe("Money entry spec", () => {
     let element;
 
     beforeEach(function () {
-        element = TestUtils.renderIntoDocument(React.createElement(MoneyEntry, {
+        element = shallow(React.createElement(MoneyEntry, {
             moneyEntry: {
                 id: 0,
                 title: 'title',
@@ -18,6 +18,6 @@ describe("Money entry spec", () => {
     });
 
     it("should be rendered", () => {
-        expect(TestUtils.isCompositeComponent(element)).toBeTruthy();
+        expect(element.find('.money-entry')).toBeTruthy();
     });
 });
