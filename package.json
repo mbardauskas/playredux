@@ -21,6 +21,7 @@
     "gulp-typescript": "^2.11.0",
     "gulp-util": "^3.0.7",
     "jest-cli": "^0.9.2",
+    "mongodb": "^2.1.18",
     "redux-devtools": "^3.1.1",
     "typescript": "^1.7.5",
     "webpack": "^1.12.13"
