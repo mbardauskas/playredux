@@ -5,12 +5,14 @@
   "author": "MB",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.13.4",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1"
   },
   "devDependencies": {
+    "babel": "^5.8.38",
     "del": "^2.2.0",
     "enzyme": "^2.2.0",
     "gulp": "^3.9.1",
@@ -24,7 +26,8 @@
     "webpack": "^1.12.13"
   },
   "scripts": {
-    "test": "gulp --mode=test && jest"
+    "test": "gulp --mode=test && jest",
+    "start": "node node_modules/babel/bin/babel-node.js server.js"
   },
   "jest": {
     "preprocessCachingDisabled": true,

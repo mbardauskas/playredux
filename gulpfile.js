@@ -110,6 +110,10 @@ gulp.task('clean', function(cb) {
     del([TEMP_DIR + '/*', OUTPUT_DIR + '/*']).then(() => cb())
 });
 
+gulp.task('copy-scripts', ['webpack'], function(){
+    return gulp.src(TEMP_DIR  + '/scripts/**').pipe(gulp.dest(OUTPUT_DIR + '/scripts/'));
+});
+
 gulp.task('default', ['clean'], function() {
-    gulp.start(['tsc', 'webpack', 'tpl']);
+    gulp.start(['tsc', 'webpack', 'tpl', 'copy-scripts']);
 });
